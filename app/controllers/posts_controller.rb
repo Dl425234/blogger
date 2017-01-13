@@ -38,6 +38,8 @@ class PostsController < ApplicationController
         redirect_to root_path
     end
     
+    
+    
     private
     
     def find_post
@@ -45,7 +47,7 @@ class PostsController < ApplicationController
     end
     
     def post_params
-        params.require(:post).permit(:title,:body)
+        params.require(:post).permit(:title,:body, :tag_list)
     end
     
    

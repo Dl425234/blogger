@@ -1,0 +1,10 @@
+<h1>Articles Tagged with <%= @tag.name %></h1>
+
+<ul>
+  <% @tag.posts.each do |pos| %>
+    <li>
+      <%= link_to pos.title, post_path(pos) %>
+     
+    </li>
+   <% end %>
+</ul>

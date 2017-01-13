@@ -9,5 +9,12 @@
     <h3> Add a Comment</h3>
     <%= render "comments/form"%>
 <br>
+    <p>
+      Tags:
+      <% @post.tags.each do |tag| %>
+        <%= link_to tag.name, tag_path(tag) %>
+      <% end %>
+    </p>
+<br>
 <%= link_to "Edit Post",edit_post_path(@post) %>
 <%= link_to "Delete", post_path(@post), method: :delete, data:{confirm: "Are you sure?"}%>
