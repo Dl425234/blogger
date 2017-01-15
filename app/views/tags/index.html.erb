@@ -1,5 +1,5 @@
 <% @tags.each do |tag| %>
     <h2><%= tag.name%></h2>
     <%= link_to "Show posts",tag%>
-    <%= link_to "Delete", tag_path(tag), method: :delete, data:{confirm: "Are you sure?"}%>
+    
 <%end%>

@@ -1,5 +1,5 @@
 <h1>Articles Tagged with <%= @tag.name %></h1>
-
+ <%= link_to "Delete", tag_path(@tag), method: :delete, class: "blog_button", data: {confirm: "Really delete the tag?"} %>
 <ul>
   <% @tag.posts.each do |pos| %>
     <li>
