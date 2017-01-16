@@ -1,5 +1,5 @@
 class TagsController < ApplicationController
-    
+    before_filter :require_login, only: [:destroy]
     def index
        @tags = Tag.all.order("created_at DESC") 
     end
